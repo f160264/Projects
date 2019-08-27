@@ -4,52 +4,44 @@ import java.util.Scanner;
 
 public class Oppg5 {
 
-	public static void main(String[] args) {
+	public static int readNumber() {
 
 		Scanner sc = new Scanner(System.in);
+		int number = 0;
 
-		int karaktersum = 0;
+		boolean ready = false;
+		do {
+			try {
+				number = sc.nextInt();
+				ready = true;
+			} catch (Exception e) {
+			}
+		} while (!ready);
 
-		karaktersum = sc.nextInt();
-
-		if (karaktersum <= 90 && karaktersum >= 100) {
-
-			System.out.println("Karakteren er A");
-
-		}
-
-		if (karaktersum <= 90 && karaktersum >= 100) {
-
-			System.out.println("Karakteren er B");
-
-		}
-
-		if (karaktersum <= 90 && karaktersum >= 100) {
-
-			System.out.println("Karakteren er C");
-
-		}
-
-		if (karaktersum <= 90 && karaktersum >= 100) {
-
-			System.out.println("Karakteren er D");
-
-		}
-
-		if (karaktersum <= 90 && karaktersum >= 100) {
-
-			System.out.println("Karakteren er E");
-
-		}
-
-		if (karaktersum <= 90 && karaktersum >= 100) {
-
-			System.out.println("Karakteren er E");
-
-		}
-		
-		sc.close();
+		return number;
 
 	}
 
+	static long faculty(int x) {
+		int a = 1;
+
+		faculty(x);
+
+		if (x < 1) {
+			return 1;
+
+		}
+//	            for (int i = 1; i <= x; i++) {
+//	                a = a*i; 
+//	            }
+
+		return faculty(x - 1) * 1;
+//	            return a; 
+	}
+
+	public static void main(String[] args) {
+
+		int x = readNumber();
+
+	}
 }
